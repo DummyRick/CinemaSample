@@ -4,10 +4,10 @@
 
 The repository's folder structure consists of:
 
-- **doc**: contains project documentation files.
-- **docker**: folder used to store Docker Compose files, configurations, and some PowerShell scripts.
-- **src**: holds the application's source code. The solution file is located within this folder, and for each service, a separate folder has been created.
-- **test**: contains tests for each service.
+- **doc**: This directory contains project documentation files.
+- **docker**: This folder is used to store Docker Compose files, configurations, and some PowerShell scripts.
+- **src**: This directory holds the application's source code. The solution file is located within this folder, and for each service, a separate folder has been created.
+- **test**: This directory contains tests for each service.
 
 ## Cinema Architecture Overview
 
@@ -15,17 +15,16 @@ The approach used is Domain-Driven Design (DDD).
 
 The application's structure is as follows:
 
-- **API**: contains models, controllers, and startup configurations.
-- **Application**: contains command and query handlers.
-- **Domain**: contains domain entities.
-- **Persistence**: manages persistence with EF Core.
+- **API**: This directory contains models, controllers, and startup configurations.
+- **Application**: This directory contains command and query handlers.
+- **Domain**: This directory contains domain entities.
+- **Persistence**: This directory manages persistence with EF Core.
 
-## Test
+## Testing
 
-In the test folder, there is a .jmx file that allows testing endpoints with [JMeter](https://jmeter.apache.org/).
-As an example, a unit test project for some domains has been included in the solution.
+In the test folder, there is a .jmx file that allows testing endpoints with [JMeter](https://jmeter.apache.org/). Additionally, a unit test project for some domains has been included in the solution.
 
-*Analyzing Tests*
+### Analyzing Tests
 
 Reaching a satisfactory test coverage percentage does not guarantee well-written tests.
 
@@ -35,6 +34,5 @@ In the src solution, there is a RunStryker.ps1 file that allows running test mut
 
 Here is an example of the output:
 
-- [Output at the first run](docs/mutation-report.FirstRun.html)
+- [Output after the first run](docs/mutation-report.FirstRun.html)
 - [Output after the second run and some fixes](docs/mutation-report.SecondRun.html)
-
